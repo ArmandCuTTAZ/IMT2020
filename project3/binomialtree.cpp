@@ -20,6 +20,7 @@
 */
 
 #include "binomialtree.hpp"
+#include <iostream>
 #include <ql/math/distributions/binomialdistribution.hpp>
 #include <ql/stochasticprocess.hpp>
 
