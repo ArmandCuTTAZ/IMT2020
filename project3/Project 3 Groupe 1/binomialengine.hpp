@@ -149,11 +149,11 @@ namespace QuantLib {
         Real gamma0 = (delta0u - delta0d) / ((s0u-s0d)/2);
         Real delta0 = (delta0u + delta0d)/2; */
 
-        Real h2 = -(s0u - s0m);
-        Real h1 = -(s0m -s0d);
-        Real f0 = p0u;
+        Real h2 = s0u - s0m;
+        Real h1 = s0m - s0d;
+        Real f0 = p0d;
         Real f1 = p0m;
-        Real f2 = p0d;
+        Real f2 = p0u;
 
         Real gamma0 = 2*(h2*f0 - (h1+h2)*f1 + h1*f2)/((h1*h2)*(h1+h2));
         Real delta0 = (-h2/(h1*(h1+h2)))*f0 - ((h1-h2)/(h1*h2))*f1 + (h1/(h2*(h1+h2)))*f2;
